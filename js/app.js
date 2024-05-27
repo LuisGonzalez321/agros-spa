@@ -1,4 +1,8 @@
-const simpleParallax = require('simple-parallax-js');
+import { gsap } from "gsap";
 
+// Asegúrate de que GSAP y ScrollTrigger están cargados
+gsap.registerPlugin(ScrollTrigger);
 
-let img = document.getElementById('img-horizontal');
+// Selecciona el contenedor de la imagen
+let imageContainer = document.querySelector('.image-container');
+let container = document.querySelector('.container');

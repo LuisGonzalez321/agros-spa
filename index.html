@@ -32,7 +32,7 @@
 <body>
 
   <!-- Header Image Central -->
-  <section class="bg-[url('./assets/img/img-header.jpg')] bg-cover bg-no-repeat bg-center w-full h-screen flex flex-col justify-start items-center text-center gap-16">
+  <section class="bg-[url('./assets/img/img-header.jpg')] bg-contain aspect-square bg-no-repeat bg-center w-full h-full flex flex-col justify-start items-center text-center gap-16">
 
     <!-- logo image -->
     <img src="./assets/img/LogoPNGAgros_Verde.png" alt="logo" class="mx-auto block max-h-[15rem] w-auto">
@@ -44,32 +44,35 @@
   </section>
 
   <!-- Main Content -->
-  <section class="bg-beige w-full h-full flex flex-col justify-center items-center gap-16">
+  <section class="bg-beige w-full h-full flex flex-col justify-center items-center gap-16 py-20 tablet:px-44 laptop:px-52 desktop:px-64">
     <div class="flex justify-center w-full items-center">
       <div class="min-w-52 bg-green h-0.5"></div>
       <h2 class="text-green text-5xl mx-4">CENTRAL AMERICA MAP</h2>
       <div class="min-w-52 bg-green h-0.5"></div>
     </div>
-    <div class="bg-[url('./assets/img/mapa.png')] bg-contain bg-no-repeat bg-center w-full h-screen">
 
-      <div>
-        <div class="bg-green text-white rounded-full w-20 h-20 flex justify-center items-center">
-          <i class="ri-add-line block text-6xl"></i>
-        </div>
-        <p class="text-green text-xl text-wrap w-48">
-          In Central America 1
-          of every 3 rural
-          inhabitants -
-          equivalent to 1.2
-          million persons - are
-          landless farm laborers
-        </p>
+    <div class="bg-[url('./assets/img/mapa.png')] bg-contain bg-no-repeat bg-center w-full  gap-y-36 flex flex-col">
+
+      <div class="w-full flex flex-col items-end">
+       <div class="">
+         <div class="bg-green text-white rounded-full w-16 h-16 flex justify-center items-center">
+           <i class="ri-add-line block text-6xl"></i>
+         </div>
+         <p class="text-green text-xl text-wrap w-48 mt-8">
+           In Central America 1
+           of every 3 rural
+           inhabitants -
+           equivalent to 1.2
+           million persons - are
+           landless farm laborers
+         </p>
+       </div>
       </div>
 
-      <div>
-        <img src="./assets/img/FotoFAMILIAvictor.png" alt="" />
+      <div class="w-1/3">
+        <img class="w-72 h-auto aspect-auto" src="./assets/img/FotoFAMILIAvictor.png" alt="" />
 
-        <h4> The Aguilar family</h4>
+        <h4 class="text-green underline text-2xl align-top font-semibold"> The Aguilar family</h4>
 
         <p>
           <strong>In the heart of rural Central America</strong> lives a
@@ -86,10 +89,27 @@
     </div>
   </section>
 
+  <!-- imagenes de las familias -->
   <section>
-    <!-- imagenes de las familias -->
-    <img src="./assets/img/img2.jpg" alt="">
-    <img src="./assets/img/img3.jpg" alt="">
+    <div class="bg-[url('./assets/img/img2.jpg')] h-screen bg-cover w-full py-20 tablet:px-48 laptop:px-56 desktop:px-72 ">
+      <p class="">
+        <strong>Victor spent more
+          than 3 decades</strong>
+        working on farms:
+        cutting co ee and
+        planting basic
+        grains.
+      </p>
+    </div>
+
+    <div class="bg-[url('./assets/img/img3.jpg')] h-screen w-full bg-cover py-20 tablet:px-48 laptop:px-56 desktop:px-72 ">
+      <p class="">
+        <strong>For years, Victor and his wife</strong>
+        struggled as vulnerable,
+        landless farm laborer, trapped
+        in a cycle of poverty.
+      </p>
+    </div>
   </section>
 
 
@@ -104,20 +124,20 @@
       <p class="mt-6 text-xl">
         <strong class="text-green">The opportunity: </strong> Victor's life took a dramatic turn when he decided to join the
         <br>
-        Agros program for landless farmers. Motivated by the dream of owning and working <br>
-        his own land, as well as providing a decent home for his family, Victor found a <br>
+        Agros program for landless farmers. Motivated by the dream of owning and working
+        his own land, as well as providing a decent home for his family, Victor found a
         comprehensive solution to his needs through Agros. <br><br>
 
-        Over the years, the program provided him with access to agricultural land, decent <br>
-        housing, basic services, technical assistance, ongoing productive training, and access <br>
+        Over the years, the program provided him with access to agricultural land, decent
+        housing, basic services, technical assistance, ongoing productive training, and access
         to formal markets. <br><br>
 
-        From adversity to success: Victor's participation in Agros has resulted in a remarkable <br>
-        transformation. Over the years, his agricultural production has seen consistent <br>
+        From adversity to success: Victor's participation in Agros has resulted in a remarkable
+        transformation. Over the years, his agricultural production has seen consistent
         success, leading to a signi cant improvement in his income. <br> <br>
 
-        Now, the family of ve lives in their own home, they’ve paid o their land loan, and <br>
-        Sadia looks forward to starting her own business. Victor is an agriculture <br>
+        Now, the family of ve lives in their own home, they’ve paid o their land loan, and
+        Sadia looks forward to starting her own business. Victor is an agriculture
         businessman, a skilled producer who manages the farm, and saves for the future. <br>
       </p>
 
@@ -126,7 +146,8 @@
   </section>
 
 
-  <section class="flex items-center justify-evenly h-lvh md:h-full bg-green-img-fixed bg-[url('./assets/img/casaAldea.jpg')]">
+  <!-- section image green -->
+  <section class="flex items-center justify-evenly md:h-[400px] bg-green-img-fixed bg-[url('./assets/img/casaAldea.jpg')]">
     <div class="block md:flex min-h-px max-h-full md:h-full justify-between px-8 xl:px-48 py-6 w-full">
       <div class="w-full md:w-1/4 mx-2">
         <img class="w-auto h-auto inline-block" src="./assets/img/logoPNGAgros_blanco.png" alt="">
@@ -147,49 +168,97 @@
   </section>
 
   <!-- horizontal scroll -->
-  <section>
-    <!--    <img id="img-horizontal" src="./assets/img/imagen-horizontal.jpg" alt="">-->
+  <section class="">
+    <div class="image-container">
+      <img id="img-horizontal" src="./assets/img/imagen-horizontal.jpg" alt="">
+    </div>
   </section>
 
-
+  <!-- section video -->
   <section>
+    <!--add tag for video-->
+    <div class="video-container">
+      <video id="video" controls>
+        <source src="./assets/video/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="px-48">
+      <p>
+        Víctor and Sadia´s children will inherit a prosperous future. is outcome is a testament to
+        their courage and determination in each step of their journey. <br> <br>
+        “I had nothing, but now, having land and a house has been the greatest blessing for our family.
+        Now I can access bank loans. Having our home and stability with my family is a joy and
+        happiness for us and for our children.” Victor Aguilar said.
+      </p>
+
+      <img src="./assets/img/aldeaAHORA.png" alt="">
+
+      <p> Before founding La Bendición village, its 264 acres consisted of a rustic farm.</p>
+      <p>After replanting with hardy rootstock and resilient new co ee varieties, the area began to
+        thrive.</p>
+
+      <h4>
+        La Bendición is home for 41 families who have reached
+        $35,000 of average net-worth.
+      </h4>
+
+      <p>
+        85% of the 41 families own their co ee farms and most of them hire about 8  part-time
+        employees to support the large-scale co ee harvests each season, which generates more than
+        300 employment opportunities for the region. <br> <br>
+        Eight years later, the entire community has reached endured prosperity. Families live plentiful
+        lives with hope and optimism for the future and they are an inspiration to others.
+      </p>
+
+    </div>
 
   </section>
 
-  <section>
-    <img src="./assets/img/logo40_aniversario.png" alt="" />
-    <h5>
+  <section class="flex items-center flex-col py-20">
+
+    <img class="w-1/3" src="./assets/img/logo40_aniversario.png" alt="" />
+
+    <h5 class="text-center text-green text-3xl w-2/5 italic mt-10">
       Join us in our 40th Anniversary by celebrating our Agros
       families´ journey and the transformative impact of our
       holistic approach to rural development.
     </h5>
-    <p>
+
+    <p class="w-2/5 mt-10 text-lg">
       For four decades, we have remained rm in our commitment to serving the most
-      vulnerable and following the teachings of Jesus.
+      vulnerable and following the teachings of Jesus. <br> <br>
+
       Inspired by our founder, Skip Li, and his tireless advocacy for landless farmers, we
       now embark on a bold mission: to impact the lives of 50,000 individuals by our 50th
-      anniversary.
+      anniversary. <br> <br>
+
       is audacious goal represents our dedication to fostering lasting change and
-      nurturing ourishing communities across Central America.
+      nurturing ourishing communities across Central America. <br> <br>
+
       It took us 30 years to reach our rst 10,000 bene ciaries, but thanks our donors
-      support, we doubled that gure from 10,000 to more than 20,000 in just six years.
-      Our Seeds of Promise, Harvest of Hope campaign marks a pivotal moment for our
+      support, we doubled that gure from 10,000 to more than 20,000 in just six years. <br> <br>
+
+      <strong>Our Seeds of Promise, Harvest of Hope</strong> campaign marks a pivotal moment for our
       ministry. Now, as we embark on the next phase of our journey, we are determined to
-      impact the lives of 30,000 more people in a
-      h of the time it took us before.
+      impact the lives of 30,000 more people in a fifth of the time it took us before. <br><br>
+
       We can't achieve these ambitious goals without your help. We need your support and
       urge you to amplify your generosity and stand with us and the people we serve.
     </p>
   </section>
 
-  <footer class="flex items-center justify-evenly h-lvh md:h-full bg-green section-2 fade-in">
-    <div class="block md:flex h-lvh md:h-full justify-between px-8 xl:px-48 py-6 w-full">
-      <div class="w-full md:w-1/6 mx-2">
+
+
+  <footer class="flex items-center justify-evenly h-lvh md:h-full bg-green-img-fixed bg-[url('./assets/img/DSC04810.jpg')]">
+    <div class="block md:flex min-h-px max-h-full md:h-full justify-between px-8 xl:px-56 py-6 w-full">
+      <div class="w-full md:w-1/4 mx-2">
         <img class="w-auto h-auto inline-block" src="./assets/img/logoPNGAgros_blanco.png" alt="">
       </div>
 
-      <div class="w-full md:w-4/6 text-sm flex flex-col justify-center font-roboto-medium text-white mx-1 md:mx-2">
-        <p>
+      <div class="w-full md:w-2/6 text-sm flex flex-col justify-center font-roboto-medium text-white mx-1 md:mx-2">
+        <p class="text-white text-xl italic">
           Agros Path to Prosperity <br><br>
           A holistic, participatory, and
           transformational journey that lifts entire
@@ -203,7 +272,8 @@
     </div>
   </footer>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/app.js"></script>
 
 </body>
