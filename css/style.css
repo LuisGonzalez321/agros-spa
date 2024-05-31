@@ -110,24 +110,7 @@ body, html {
   pointer-events: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
 /*generate a triangle*/
-.tooltip::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0.8rem 0.8rem 0 0.8rem;
-  border-color: white transparent transparent transparent;
-  transform: translateX(-50%);
-}
-
-
-
-
-
 
 
 @tailwind base;

@@ -54,25 +54,25 @@
 <!-- Main Content -->
   <section class="bg-beige w-full h-full flex flex-col justify-center items-center gap-4 phone:py-4 laptop:py-20 tablet:px-20 laptop:px-52 desktop:px-72">
     <div class="flex justify-center w-full items-center">
-      <div class="min-w-40 bg-green h-[1px]"></div>
+      <div class="phone:w-12 laptop:w-40 bg-green h-[1px]"></div>
       <h2 class="text-green phone:text-xl tablet:text-2xl laptop:text-4xl mx-3 font-georgia font-light text-center">CENTRAL AMERICA MAP</h2>
-      <div class="min-w-40 bg-green h-[1px]"></div>
+      <div class="phone:w-12 laptop:w-40 bg-green h-[1px]"></div>
     </div>
 
     <div class="bg-contain bg-no-repeat bg-center w-full relative flex flex-col">
 
       <img src="./assets/img/mapa.png" alt="" class=" aspect-auto"/>
 
-      <div class="absolute flex flex-col gap-y-36 w-full">
+      <div class="phone:relative laptop:absolute flex flex-col phone:gap-y-10 laptop:gap-y-36 w-full">
 
-        <div class="w-full flex flex-col items-end">
+        <div class="w-full flex flex-col phone:items-center laptop:items-end px-4 laptop:px-0">
           <div class="">
             <a class="button">
-              <div id="popupSection" class="bg-green text-white rounded-full w-14 h-14 flex justify-center items-center">
-                <i class="ri-add-line block text-5xl"></i>
+              <div id="popupSection" class="bg-green text-white rounded-full phone:h-8 phone:w-8 laptop:w-14 laptop:h-14 flex justify-center items-center">
+                <i class="ri-add-line block phone:text-2xl laptop:text-5xl"></i>
               </div>
             </a>
-            <p class="text-green text-xl text-wrap w-48 mt-2">
+            <p class="text-green phone:text-base laptop:text-xl text-wrap w-48 mt-2">
               In Central America 1
               of every 3 rural
               inhabitants -
@@ -83,21 +83,21 @@
           </div>
         </div>
 
-        <div class="w-full flex flex-col items-start relative">
-          <img class="w-72 h-auto aspect-auto img-families" src="./assets/img/FotoFAMILIAvictor.png" alt="" />
+        <div class="w-full flex flex-col phone:items-center laptop:items-start relative px-4 laptop:px-0">
+          <img class="phone:w-32 laptop:w-72 h-auto aspect-auto img-families" src="./assets/img/FotoFAMILIAvictor.png" alt="" />
 
-          <h4 class="text-green underline text-2xl align-top font-semibold "> The Aguilar family</h4>
+          <h4 class="text-green underline phone:text-base laptop:text-2xl align-top font-semibold "> The Aguilar family</h4>
 
-<!--          <p class="w-1/3">-->
-<!--            <strong>In the heart of rural Central America</strong> lives a-->
-<!--            courageous family. Just over ve years ago, they-->
-<!--            made a bold decision to forge a new path, diverging-->
-<!--            from the cycle of extreme poverty that had de ned-->
-<!--            their lives for generations.-->
-<!--            is the story of Victor Aguilar, his wife Sadia,-->
-<!--            and their three children, in their journey to-->
-<!--            enduring prosperity.-->
-<!--          </p>-->
+          <p class="phone:w-auto tablet:w-1/3 laptop:w-1/3">
+            <strong>In the heart of rural Central America</strong> lives a
+            courageous family. Just over ve years ago, they
+            made a bold decision to forge a new path, diverging
+            from the cycle of extreme poverty that had de ned
+            their lives for generations.
+            is the story of Victor Aguilar, his wife Sadia,
+            and their three children, in their journey to
+            enduring prosperity.
+          </p>
         </div>
       </div>
 
@@ -119,7 +119,7 @@
       </p>
 
       <div class="mx-auto mt-10 absolute z-30 flex flex-col items-center left-1/2">
-        <div id="tooltip" class="tooltip text-xl phone:w-full  laptop:w-1/2 laptop:top-[100px] laptop:left-[312px]">
+        <div id="tooltip" class="tooltip phone:text-base laptop:text-xl phone:w-full  laptop:w-1/2 laptop:top-[100px] laptop:left-[312px]">
           His work took him away
           from his family, migrating
           from farm to farm.</div>
@@ -130,7 +130,7 @@
 
     <div class="w-full relative h-full flex flex-col items-center justify-start text-center">
       <img src="./assets/img/img3.jpg" class="bg-contain"  alt=""/>
-      <p class="absolute phone:w-full laptop:w-1/4 self-start px-8 top-10 text-start  phone:text-base laptop:text-3xl font-minionpro-regular">
+      <p class="absolute phone:w-full laptop:w-1/4 self-start px-8 top-10 text-start phone:text-base laptop:text-3xl font-minionpro-regular">
         <strong>For years, Victor and his wife</strong>
         struggled as vulnerable,
         landless farm laborer, trapped
@@ -138,7 +138,7 @@
       </p>
 
       <div class="mx-auto mt-10 absolute z-30 flex flex-col items-center left-1/2">
-        <div id="tooltip-2" class="tooltip text-xl phone:w-full  laptop:w-1/2 text-left laptop:top-[100px] laptop:left-[312px]">
+        <div id="tooltip-2" class="tooltip phone:text-base laptop:text-xl phone:w-full  laptop:w-1/2 text-left laptop:top-[100px] left-20">
           His daily work barely provided him
           and his family with enough income
           to cover most of their basic needs of
@@ -147,22 +147,21 @@
         <button id="tooltip-button-2" class="text-white px-4 py-2 w-10 h-10 bg-green rounded-full mt-4"></button>
       </div>
 
-      <div class="mx-auto mt-10 absolute z-30 laptop:top-1/2 laptop:left-[0px]">
-        <div id="tooltip-3" class="tooltip text-xl phone:w-52 laptop:w-1/3 text-center ">
+      <div class="mx-auto mt-10 absolute z-30 laptop:top-1/2 laptop:left-[10px]">
+        <div id="tooltip-3" class="tooltip phone:text-base laptop:text-xl phone:w-52 laptop:w-1/3 text-center ">
           His daily sacrifice barely
           translated into <br>
-          <span class="text-green text-2xl">$3.00 per day,</span> <br>
+          <span class="text-green phone:text-xl laptop:text-2xl">$3.00 per day,</span> <br>
           an insufficient sum to
           support his family.
         </div>
         <button id="tooltip-button-3" class="text-white px-4 py-2 w-10 h-10 bg-green rounded-full mt-4"></button>
       </div>
-
     </div>
   </section>
 
 
-  <section class="flex flex-col justify-center bg-beige py-20 phone:px-10 tablet:px-20 laptop:px-52 desktop:px-80">
+  <section class="flex flex-col justify-center bg-beige py-20 phone:px-4 tablet:px-20 laptop:px-52 desktop:px-80">
     <h3 class="text-green text-center phone:text-xl tablet:text-3xl font-georgia fade">
       THE INTERSECTION OF DEEP NEED AND
       UNIQUE OPPORTUNITY TO BENEFIT MOST
@@ -238,14 +237,14 @@
   <!-- section video -->
   <section class="py-20">
     <!--add tag for video-->
-    <div class="video-container w-full tablet:px-20 laptop:px-52 desktop:px-72">
+    <div class="video-container w-full tablet:px-20 laptop:px-52 desktop:px-72 mx-auto flex justify-center">
       <video id="video" controls>
         <source src="./assets/video/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
-    <div class="mt-10 tablet:px-20 laptop:px-52 desktop:px-72">
+    <div class="mt-10 phone:px-4 tablet:px-20 laptop:px-52 desktop:px-72">
 
       <p class="font-minionpro-regular">
         Víctor and Sadia´s children will inherit a prosperous future. is outcome is a testament to
@@ -258,7 +257,7 @@
 
     <img class=" block min-h-full w-full aspect-auto object-cover bg-contain" src="./assets/img/aldeaAHORA.jpg" alt="">
 
-    <div class="tablet:px-20 laptop:px-52 desktop:px-72">
+    <div class="phone:px-4 tablet:px-20 laptop:px-52 desktop:px-72">
       <p class="text-green font-minionpro-regular phone:text-xl laptop:text-2xl"> Before founding La Bendición village, its 264 acres consisted of a rustic farm.</p>
       <p class="font-minionpro-regular phone:text-lg laptop:text-xl">After replanting with hardy rootstock and resilient new co ee varieties, the area began to
         thrive.</p>
@@ -281,11 +280,11 @@
     </div>
   </section>
 
-  <section class="flex flex-col py-20  phone:px-10 tablet:px-20 laptop:px-52 desktop:px-80">
+  <section class="flex flex-col py-20  phone:px-4 tablet:px-20 laptop:px-52 desktop:px-80">
 
-    <img class="w-2/3 fade mx-auto" src="./assets/img/logo40_aniversario.png" alt="" />
+    <img class="phone:w-auto laptop:w-2/3 fade mx-auto" src="./assets/img/logo40_aniversario.png" alt="" />
 
-    <h5 class="text-center text-green text-3xl italic mt-10 font-georgia">
+    <h5 class="text-center text-green phone:text-xl tablet:text-2xl laptop:text-3xl italic mt-10 font-georgia">
       For four decades, we have remained firm in our commitment to
       serving the most vulnerable and following the teachings of Jesus.
       Join us in our 40th Anniversary by celebrating our Agros
@@ -336,12 +335,14 @@
   </section>
 
   <footer class="flex items-center justify-evenly h-lvh md:h-full bg-green-img-fixed bg-[url('./assets/img/DSC04810.jpg')]">
+
     <div class="block md:flex min-h-px max-h-full justify-between items-center py-40 w-full phone:px-10 tablet:px-20 laptop:px-48 desktop:px-72">
-      <div class="phone:w-full laptop:w-1/2 mx-2 img-agros flex justify-start">
+
+      <div class="phone:w-full laptop:w-1/2 mx-2 img-agros-footer flex justify-start">
         <img class="w-auto max-h-56 inline-block" src="./assets/img/logoPNGAgros_blanco.png" alt="">
       </div>
 
-      <div class="laptop:w-1/2 text-sm flex flex-col justify-center font-roboto-medium text-white mx-1 md:mx-2 text-agros">
+      <div class="laptop:w-1/2 text-sm flex flex-col justify-center font-roboto-medium text-white mx-1 md:mx-2 text-agros-footer">
         <p class="text-white text-xl italic">
           Agros Path to Prosperity <br> <br>
           A holistic, participatory, and
@@ -353,6 +354,7 @@
           <a href="https://www.agros.com" target="_blank">www.agros.org</a>
         </p>
       </div>
+
     </div>
   </footer>
 

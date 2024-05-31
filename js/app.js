@@ -99,7 +99,7 @@ const moveElement = (orientation, className) => {
     duration: 1,
     scrollTrigger: {
       trigger: className,
-      start: 'top 100%',
+      start: 'top 70%',
       toggleActions: 'play none none none'
     }
   });
@@ -107,6 +107,8 @@ const moveElement = (orientation, className) => {
 
 moveElement(-100, '.img-agros');
 moveElement(100, '.text-agros');
+moveElement(-100, '.img-agros-footer');
+moveElement(100, '.text-agros-footer');
 
 //Animación de desplazamiento scroll horizontal para la sección de imagen
 
