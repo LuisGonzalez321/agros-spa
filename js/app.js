@@ -43,9 +43,8 @@ const fadeIn = (element, delay = 0, duration = 1) => {
   );
 }
 
-document.querySelectorAll('.fade').forEach((element, index) => {
-  fadeIn(element, index * 0.5);
-});
+document.querySelectorAll('.fade')
+  .forEach((element, index) => fadeIn(element, index * 0.5));
 
 ///////////////////////////////////////////
 // Animacion de text reveal para parrafos
@@ -90,31 +89,68 @@ createScrollAnimation(window, '.line', '.p-reveal-beige');
 ///////////////////////////////////////////
 // Animación de desplazamiento para la sección de imagen
 
-gsap.fromTo('.img-agros', {
-  x: -100,
-  opacity: 0
-}, {
-  x: 0,
-  opacity: 1,
-  duration: 1,
-  scrollTrigger: {
-    trigger: '.img-agros',
-    start: 'top 80%',
-    toggleActions: 'play none none none'
-  }
+const moveElement = (orientation, className) => {
+    gsap.fromTo(className, {
+    x: orientation,
+    opacity: 0
+  }, {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: className,
+      start: 'top 100%',
+      toggleActions: 'play none none none'
+    }
+  });
+};
+
+moveElement(-100, '.img-agros');
+moveElement(100, '.text-agros');
+
+//Animación de desplazamiento scroll horizontal para la sección de imagen
+
+$(document).ready(function() {
+  gsap.to("#img-horizontal", {
+    x: () => -(document.querySelector("#img-horizontal").scrollWidth - window.innerWidth) + "px",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".scroll",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      pin: true,
+    }
+  });
 });
 
-// Animación de desplazamiento para la sección de texto de derecha a izquierda
-gsap.fromTo('.text-agros', {
-  x: 100,
-  opacity: 0
-}, {
-  x: 0,
-  opacity: 1,
-  duration: 1,
-  scrollTrigger: {
-    trigger: '.text-agros',
-    start: 'top 80%',
-    toggleActions: 'play none none none'
-  }
-});
+
+// Animacion para tooltip
+const generateTooltip = (classNameDiv, classNameButton) => {
+  $(document).ready(function () {
+    const $button = $(classNameButton);
+    const $tooltip = $(classNameDiv);
+
+    $button.on('mouseenter', function (event) {
+      gsap.to($tooltip, {
+        duration: 0.3,
+        autoAlpha: 1,
+        display: 'block'
+      });
+    });
+
+    $button.on('mouseleave', function () {
+      gsap.to($tooltip, {
+        duration: 0.3,
+        autoAlpha: 0,
+      });
+    });
+  });
+}
+
+generateTooltip('#tooltip', '#tooltip-button');
+generateTooltip('#tooltip-2', '#tooltip-button-2');
+generateTooltip('#tooltip-3', '#tooltip-button-3');
+
+
+

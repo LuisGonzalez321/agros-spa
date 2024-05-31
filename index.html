@@ -40,47 +40,38 @@
 <!-- logo image -->
   <img src="./assets/img/img_header.jpg" alt="logo" class="mx-auto block min-h-full w-auto aspect-auto">
 
-  <div class="flex flex-col justify-start items-center text-center gap-16 absolute">
-    <img src="./assets/img/LogoPNGAgros_Verde.png" alt="logo" class="mx-auto block min-h-full max-h-[15rem] w-auto">
+  <div class="flex flex-col justify-start items-center text-center phone:gap-y-4 tablet:gap-16 absolute">
+    <img src="./assets/img/LogoPNGAgros_Verde.png" alt="logo" class="mx-auto block min-h-full phone:w-[6rem] tablet:w-[8rem] laptop:w-[15rem] max-h-[15rem]">
     <p class="text-green phone:text-2xl tablet:text-5xl laptop:text-6xl font-georgia font-medium reveal">
       <span style="animation-delay: 1s;">A snapshot of farming</span><br>
       <span style="animation-delay: 1.5s;">families in Central America</span>
     </p>
   </div>
-
 </section>
 
 
 
 <!-- Main Content -->
-  <section class="bg-beige w-full h-full flex flex-col justify-center items-center gap-4 py-20 tablet:px-20 laptop:px-52 desktop:px-72">
+  <section class="bg-beige w-full h-full flex flex-col justify-center items-center gap-4 phone:py-4 laptop:py-20 tablet:px-20 laptop:px-52 desktop:px-72">
     <div class="flex justify-center w-full items-center">
-      <div class="min-w-40 bg-green h-0.5"></div>
-      <h2 class="text-green phone:text-2xl tablet:text-3xl laptop:text-5xl mx-3 font-georgia font-light">CENTRAL AMERICA MAP</h2>
-      <div class="min-w-40 bg-green h-0.5"></div>
+      <div class="min-w-40 bg-green h-[1px]"></div>
+      <h2 class="text-green phone:text-xl tablet:text-2xl laptop:text-4xl mx-3 font-georgia font-light text-center">CENTRAL AMERICA MAP</h2>
+      <div class="min-w-40 bg-green h-[1px]"></div>
     </div>
 
     <div class="bg-contain bg-no-repeat bg-center w-full relative flex flex-col">
 
       <img src="./assets/img/mapa.png" alt="" class=" aspect-auto"/>
 
-      <div class="absolute">
+      <div class="absolute flex flex-col gap-y-36 w-full">
+
         <div class="w-full flex flex-col items-end">
           <div class="">
-            <div id="popupSection" class="bg-green text-white rounded-full w-14 h-14 flex justify-center items-center">
-              <i class="ri-add-line block text-5xl"></i>
-            </div>
-
-            <!--Init popup -->
-            <div id="popup" class="popup">
-              <div class="popup-content">
-                <span class="close" id="closePopup">&times;</span>
-                <h2>Contenido del Popup</h2>
-                <p>Este es el contenido de mi popup.</p>
+            <a class="button">
+              <div id="popupSection" class="bg-green text-white rounded-full w-14 h-14 flex justify-center items-center">
+                <i class="ri-add-line block text-5xl"></i>
               </div>
-            </div>
-            <!-- end popup -->
-
+            </a>
             <p class="text-green text-xl text-wrap w-48 mt-2">
               In Central America 1
               of every 3 rural
@@ -92,21 +83,21 @@
           </div>
         </div>
 
-        <div class="w-1/3 relative">
-          <img class="w-72 h-auto aspect-auto" src="./assets/img/FotoFAMILIAvictor.png" alt="" />
+        <div class="w-full flex flex-col items-start relative">
+          <img class="w-72 h-auto aspect-auto img-families" src="./assets/img/FotoFAMILIAvictor.png" alt="" />
 
-          <h4 class="text-green underline text-2xl align-top font-semibold"> The Aguilar family</h4>
+          <h4 class="text-green underline text-2xl align-top font-semibold "> The Aguilar family</h4>
 
-          <p>
-            <strong>In the heart of rural Central America</strong> lives a
-            courageous family. Just over ve years ago, they
-            made a bold decision to forge a new path, diverging
-            from the cycle of extreme poverty that had de ned
-            their lives for generations.
-            is is the story of Victor Aguilar, his wife Sadia,
-            and their three children, in their journey to
-            enduring prosperity.
-          </p>
+<!--          <p class="w-1/3">-->
+<!--            <strong>In the heart of rural Central America</strong> lives a-->
+<!--            courageous family. Just over ve years ago, they-->
+<!--            made a bold decision to forge a new path, diverging-->
+<!--            from the cycle of extreme poverty that had de ned-->
+<!--            their lives for generations.-->
+<!--            is the story of Victor Aguilar, his wife Sadia,-->
+<!--            and their three children, in their journey to-->
+<!--            enduring prosperity.-->
+<!--          </p>-->
         </div>
       </div>
 
@@ -117,8 +108,8 @@
   <section class="h-full">
 
     <div class="w-full relative h-full flex flex-col items-center justify-start text-center">
-      <img class="bg-contain " src="./assets/img/img2.jpg" alt="">
-      <p class="absolute w-1/2 self-start px-8 top-10 text-start text-xl font-minionpro-regular">
+      <img src="./assets/img/img2.jpg" class="bg-contain"  alt=""/>
+      <p class="absolute phone:w-full laptop:w-1/4 self-start px-8 top-10 text-start  phone:text-base laptop:text-3xl font-minionpro-regular">
         <strong>Victor spent more
           than 3 decades</strong>
         working on farms:
@@ -126,21 +117,52 @@
         planting basic
         grains.
       </p>
+
+      <div class="mx-auto mt-10 absolute z-30 flex flex-col items-center left-1/2">
+        <div id="tooltip" class="tooltip text-xl phone:w-full  laptop:w-1/2 laptop:top-[100px] laptop:left-[312px]">
+          His work took him away
+          from his family, migrating
+          from farm to farm.</div>
+        <button id="tooltip-button" class="text-white px-4 py-2 w-10 h-10 bg-green rounded-full mt-4"></button>
+      </div>
+
     </div>
 
     <div class="w-full relative h-full flex flex-col items-center justify-start text-center">
       <img src="./assets/img/img3.jpg" class="bg-contain"  alt=""/>
-      <p class="absolute w-1/2 self-start px-8 top-10 text-start text-xl font-minionpro-regular">
+      <p class="absolute phone:w-full laptop:w-1/4 self-start px-8 top-10 text-start  phone:text-base laptop:text-3xl font-minionpro-regular">
         <strong>For years, Victor and his wife</strong>
         struggled as vulnerable,
         landless farm laborer, trapped
         in a cycle of poverty.
       </p>
+
+      <div class="mx-auto mt-10 absolute z-30 flex flex-col items-center left-1/2">
+        <div id="tooltip-2" class="tooltip text-xl phone:w-full  laptop:w-1/2 text-left laptop:top-[100px] laptop:left-[312px]">
+          His daily work barely provided him
+          and his family with enough income
+          to cover most of their basic needs of
+          food, a dignified home, health, and
+          education.</div>
+        <button id="tooltip-button-2" class="text-white px-4 py-2 w-10 h-10 bg-green rounded-full mt-4"></button>
+      </div>
+
+      <div class="mx-auto mt-10 absolute z-30 laptop:top-1/2 laptop:left-[0px]">
+        <div id="tooltip-3" class="tooltip text-xl phone:w-52 laptop:w-1/3 text-center ">
+          His daily sacrifice barely
+          translated into <br>
+          <span class="text-green text-2xl">$3.00 per day,</span> <br>
+          an insufficient sum to
+          support his family.
+        </div>
+        <button id="tooltip-button-3" class="text-white px-4 py-2 w-10 h-10 bg-green rounded-full mt-4"></button>
+      </div>
+
     </div>
   </section>
 
 
-  <section class="flex flex-col justify-center bg-beige py-20 phone:px-10 tablet:px-20 laptop:px-52 desktop:px-72">
+  <section class="flex flex-col justify-center bg-beige py-20 phone:px-10 tablet:px-20 laptop:px-52 desktop:px-80">
     <h3 class="text-green text-center phone:text-xl tablet:text-3xl font-georgia fade">
       THE INTERSECTION OF DEEP NEED AND
       UNIQUE OPPORTUNITY TO BENEFIT MOST
@@ -180,45 +202,51 @@
 
 
   <!-- section image green -->
-  <section class="flex items-center justify-evenly md:h-[400px] bg-green-img-fixed bg-[url('./assets/img/casaAldea.jpg')]">
-    <div class="block md:flex min-h-px max-h-full md:h-full justify-evenly px-8 xl:px-48 py-6 w-full">
-
-      <div class="w-full md:w-1/4 mx-2 flex justify-center items-center img-agros">
-        <img class="w-auto h-auto inline-block" src="./assets/img/logoPNGAgros_blanco.png" alt="">
+  <section class="flex items-center justify-evenly h-lvh md:h-full bg-green-img-fixed bg-[url('./assets/img/casaAldea.jpg')]">
+    <div class="block md:flex min-h-px max-h-full justify-between items-center py-48 w-full phone:px-10 tablet:px-20 laptop:px-48 desktop:px-72">
+      <div class="phone:w-full laptop:w-1/2 mx-2 img-agros flex justify-start">
+        <img class="w-auto max-h-56 inline-block" src="./assets/img/logoPNGAgros_blanco.png" alt="">
       </div>
 
-      <div class="flex flex-col justify-center items-start text-agros">
-        <h5 class="text-white text-4xl italic font-minionpro-regular">
+      <div class="laptop:w-1/2 text-sm flex flex-col justify-center font-roboto-medium text-white mx-1 md:mx-2 text-agros">
+        <h5 class="text-white phone:text-3xl laptop:text-5xl italic font-minionpro-regular">
           The path to prosperity
         </h5>
-
-        <p class="text-white text-2xl italic font-minionpro-regular">
-          A model for holistic transformation <br>
-          that provides a lasting solution to <br>
+        <p class="text-white phone:text-2xl laptop:text-3xl italic font-minionpro-regular">
+          A model for holistic transformation
+          that provides a lasting solution to
           intergenerational rural poverty.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- horizontal scroll -->
-  <section class="">
-<!--    <div class="image-container">-->
-<!--      <img id="img-horizontal" src="./assets/img/imagen-horizontal.jpg" alt="">-->
-<!--    </div>-->
+<!-- section image horizontal -->
+  <section class="scroll h-screen overflow-hidden relative">
+    <div class="image-container w-[2000%] h-full absolute top-0 left-0 ">
+      <img class="h-full " id="img-horizontal" src="./assets/img/imagen-horizontal.jpg" alt="Horizontal Image">
+      <div>
+        <p class="text-white text-2xl font-minionpro-regular text-center">
+          The Agros model is a comprehensive solution that addresses the root causes of rural poverty.
+          It provides land, housing, basic services, technical assistance, ongoing productive training,
+          and access to formal markets.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- section video -->
-  <section class="py-20 phone:px-10 tablet:px-20 laptop:px-52 desktop:px-72">
+  <section class="py-20">
     <!--add tag for video-->
-    <div class="video-container w-full">
+    <div class="video-container w-full tablet:px-20 laptop:px-52 desktop:px-72">
       <video id="video" controls>
         <source src="./assets/video/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
-    <div class="mt-10">
+    <div class="mt-10 tablet:px-20 laptop:px-52 desktop:px-72">
+
       <p class="font-minionpro-regular">
         Víctor and Sadia´s children will inherit a prosperous future. is outcome is a testament to
         their courage and determination in each step of their journey. <br> <br>
@@ -226,14 +254,16 @@
         Now I can access bank loans. Having our home and stability with my family is a joy and
         happiness for us and for our children.” Victor Aguilar said.
       </p>
+    </div>
 
-      <img src="./assets/img/aldeaAHORA.png" alt="">
+    <img class=" block min-h-full w-full aspect-auto object-cover bg-contain" src="./assets/img/aldeaAHORA.jpg" alt="">
 
-      <p class="text-green font-minionpro-regular text-xl it"> Before founding La Bendición village, its 264 acres consisted of a rustic farm.</p>
-      <p class="font-minionpro-regular text-lg">After replanting with hardy rootstock and resilient new co ee varieties, the area began to
+    <div class="tablet:px-20 laptop:px-52 desktop:px-72">
+      <p class="text-green font-minionpro-regular phone:text-xl laptop:text-2xl"> Before founding La Bendición village, its 264 acres consisted of a rustic farm.</p>
+      <p class="font-minionpro-regular phone:text-lg laptop:text-xl">After replanting with hardy rootstock and resilient new co ee varieties, the area began to
         thrive.</p>
 
-      <h4 class="my-10 text-green font-georgia text-2xl italic">
+      <h4 class="my-10 text-green font-georgia phone:text-xl laptop:text-2xl desktop:text-3xl italic">
         La Bendición is home for 41 families who have reached
         $35,000 of average net-worth.
       </h4>
@@ -249,61 +279,69 @@
         lives with hope and optimism for the future and they are an inspiration to others.
       </p>
     </div>
-
   </section>
 
-  <section class="flex flex-col py-20 tablet:px-20 laptop:px-52 desktop:px-64">
+  <section class="flex flex-col py-20  phone:px-10 tablet:px-20 laptop:px-52 desktop:px-80">
 
     <img class="w-2/3 fade mx-auto" src="./assets/img/logo40_aniversario.png" alt="" />
 
     <h5 class="text-center text-green text-3xl italic mt-10 font-georgia">
+      For four decades, we have remained firm in our commitment to
+      serving the most vulnerable and following the teachings of Jesus.
       Join us in our 40th Anniversary by celebrating our Agros
-      families´ journey and the transformative impact of our
-      holistic approach to rural development.
+      families´ journey and the transformative impact of our holistic
+      approach to rural development.
     </h5>
 
     <p data-lining data-auto-resize class="mt-10 text-lg p-reveal overflow-hidden inline-block max-w-full">
-      For four decades, we have remained rm in our commitment to serving the most
-      vulnerable and following the teachings of Jesus.
+      Inspired by our founder, Skip Li, and his tireless advocacy for landless farmers, we now
+      embark on a bold mission: to impact the lives of 50,000 individuals by our 50th anniversary.
     </p> <br>
 
     <p data-lining data-auto-resize class="text-lg p-reveal overflow-hidden inline-block max-w-full">
-      Inspired by our founder, Skip Li, and his tireless advocacy for landless farmers, we
-      now embark on a bold mission: to impact the lives of 50,000 individuals by our 50th
-      anniversary.
+      Aiming higher! <br>
+      In Agros' first 30 years, we impacted the lives of 10,000 beneficiaries. By our 40th
+      anniversary, we reached 10,000 more villagers. Now, we intend to transform 30,000 more
+      people in the next 10 years – an acceleration factor of 3x.
     </p> <br>
 
     <p data-lining data-auto-resize class="text-lg p-reveal overflow-hidden inline-block max-w-full">
-      This audacious goal represents our dedication to fostering lasting change and
-      nurturing ourishing communities across Central America.
-    </p> <br>
-
-    <p data-lining data-auto-resize class="text-lg p-reveal overflow-hidden inline-block max-w-full">
-      It took us 30 years to reach our rst 10,000 bene ciaries, but thanks our donors
-      support, we doubled that gure from 10,000 to more than 20,000 in just six years.
+      This audacious goal represents our dedication to fostering lasting change and nurturing
+      flourishing communities across Central America.
     </p> <br>
 
     <p data-lining data-auto-resize class="text-lg p-reveal overflow-hidden inline-block max-w-full">
       <strong>Our Seeds of Promise, Harvest of Hope</strong> campaign marks a pivotal moment for our
-      ministry. Now, as we embark on the next phase of our journey, we are determined to
-      impact the lives of 30,000 more people in a fifth of the time it took us before.
+      ministry and it marks the launch of our ambitious five-year fundraising campaign to
+      radically transform lives and build intergenerational prosperity.
     </p> <br>
 
     <p data-lining data-auto-resize class="text-lg p-reveal overflow-hidden inline-block max-w-full">
-      We can't achieve these ambitious goals without your help. We need your support and
-      urge you to amplify your generosity and stand with us and the people we serve.
+      Join us as we embark on this campaign to accelerate transformation of 50,000 lives.
     </p>
+
+    <div class="container mx-auto mt-10">
+      <h2 class="text-green-900 font-bold mb-4 font-georgia">HERE IS HOW:</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="border-l-4 border-green-700 pl-4">
+          <h3 class="text-green-900 font-bold font-minionpro-regular">Invest to Transform Lives</h3>
+          <p class="font-minionpro-regular">Help transform families living in extreme poverty by making your most generous donation at <a href="https://agros.org/donate" class="text-blue-600 underline">agros.org/donate</a></p>
+        </div>
+        <div class="border-l-4 border-green-700 pl-4">
+          <h3 class="text-green-900 font-bold font-minionpro-regular">Travel with Agros</h3>
+          <p class="font-minionpro-regular">Experience life in rural Latin America. Meet the farming families you serve. Deepen your commitment. For schedule and details, visit <a href="https://agros.org/travel" class="text-blue-600 underline">agros.org/travel</a>.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-
-
   <footer class="flex items-center justify-evenly h-lvh md:h-full bg-green-img-fixed bg-[url('./assets/img/DSC04810.jpg')]">
-    <div class="block md:flex min-h-px max-h-full md:h-full justify-center items-center px-8 xl:px-56 py-6 w-full">
-      <div class="w-1/2 mx-2 img-agros ">
+    <div class="block md:flex min-h-px max-h-full justify-between items-center py-40 w-full phone:px-10 tablet:px-20 laptop:px-48 desktop:px-72">
+      <div class="phone:w-full laptop:w-1/2 mx-2 img-agros flex justify-start">
         <img class="w-auto max-h-56 inline-block" src="./assets/img/logoPNGAgros_blanco.png" alt="">
       </div>
 
-      <div class="w-1/2 text-sm flex flex-col justify-center font-roboto-medium text-white mx-1 md:mx-2 text-agros">
+      <div class="laptop:w-1/2 text-sm flex flex-col justify-center font-roboto-medium text-white mx-1 md:mx-2 text-agros">
         <p class="text-white text-xl italic">
           Agros Path to Prosperity <br> <br>
           A holistic, participatory, and
