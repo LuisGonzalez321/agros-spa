@@ -24,6 +24,7 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "remixicon": "^4.2.0"
   }
 }

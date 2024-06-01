@@ -88,7 +88,7 @@ createScrollAnimation(window, '.line', '.p-reveal-beige');
 // Animación de desplazamiento para la sección de imagen
 
 const moveElement = (orientation, className) => {
-    gsap.fromTo(className, {
+  gsap.fromTo(className, {
     x: orientation,
     opacity: 0
   }, {
@@ -109,6 +109,16 @@ moveElement(-100, '.img-agros-footer');
 moveElement(100, '.text-agros-footer');
 
 //Animación de desplazamiento scroll horizontal para la sección de imagen
+
+const scrollContainer = document.querySelector('.scroll');
+
+/* Add the  html tags to s*/
+// <div className="image-container w-[600%] h-full absolute top-0 left-0 ">
+//   <img className="h-full " id="img-horizontal" src="./assets/img/FondoHorizontal.jpg" alt="Horizontal Image"/>
+// </div>
+
+
+
 gsap.to("#img-horizontal", {
   x: () => -(document.querySelector("#img-horizontal").scrollWidth - window.innerWidth) + "px",
   ease: "none",
