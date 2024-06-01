@@ -109,17 +109,18 @@ moveElement(-100, '.img-agros-footer');
 moveElement(100, '.text-agros-footer');
 
 //Animación de desplazamiento scroll horizontal para la sección de imagen
-
-gsap.to("#img-horizontal", {
-  x: () => -(document.querySelector("#img-horizontal").scrollWidth - window.innerWidth) + "px",
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".scroll",
-    start: "top top",
-    end: "bottom top",
-    scrub: true,
-    pin: true,
-  }
+$(document).ready(function () {
+  gsap.to("#img-horizontal", {
+    x: () => -(document.querySelector("#img-horizontal").scrollWidth - window.innerWidth) + "px",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".scroll",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      pin: true,
+    }
+  });
 });
 
 
