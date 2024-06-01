@@ -112,18 +112,16 @@ moveElement(100, '.text-agros-footer');
 
 //Animación de desplazamiento scroll horizontal para la sección de imagen
 
-$(document).ready(function() {
-  gsap.to("#img-horizontal", {
-    x: () => -(document.querySelector("#img-horizontal").scrollWidth - window.innerWidth) + "px",
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".scroll",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-      pin: true,
-    }
-  });
+gsap.to("#img-horizontal", {
+  x: () => -(document.querySelector("#img-horizontal").scrollWidth - window.innerWidth) + "px",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".scroll",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    pin: true,
+  }
 });
 
 
@@ -153,6 +151,3 @@ const generateTooltip = (classNameDiv, classNameButton) => {
 generateTooltip('#tooltip', '#tooltip-button');
 generateTooltip('#tooltip-2', '#tooltip-button-2');
 generateTooltip('#tooltip-3', '#tooltip-button-3');
-
-
-
