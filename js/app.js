@@ -124,8 +124,8 @@ gsap.to("#img-horizontal", {
   ease: "none",
   scrollTrigger: {
     trigger: ".scroll",
-    start: "top top",
-    end: "bottom top",
+    start: "top",
+    end: "bottom",
     scrub: true,
     pin: true,
   }
