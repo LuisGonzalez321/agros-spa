@@ -1,3 +1,6 @@
+//add gsap library
+ import {gsap} from "gsap";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const spans = document.querySelectorAll('.reveal span');
