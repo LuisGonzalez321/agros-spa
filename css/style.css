@@ -26,6 +26,7 @@ body, html {
 @font-face {
   font-family: "Georgia";
   src: url("../assets/fonts/Georgia.ttf") format("truetype");
+  /*add compatibility for firebox and safari*/
   font-style: normal;
 }
 
@@ -108,9 +109,53 @@ body, html {
   border-radius: 0.25rem;
   z-index: 30;
   pointer-events: none;
+  text-align: left;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/*generate a triangle*/
+/*=======================================*/
+
+.blink-circle {
+  animation: blink 4s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+/*======================================*/
+.speech-bubble {
+  position: relative;
+  background: white;
+  border-radius: .4em;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', sans-serif;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-top-color: white;
+  border-bottom: 0;
+  margin-left: -15px;
+  margin-bottom: -15px;
+}
+
 
 
 @tailwind base;

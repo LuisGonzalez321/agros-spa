@@ -1,5 +1,5 @@
 //add gsap library
- import {gsap} from "gsap";
+//  import {gsap} from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,6 +83,22 @@ createScrollAnimation(window, '.line', '.p-reveal-beige');
 ///////////////////////////////////////////
 // Animacion para popup de imagenes ///////
 ///////////////////////////////////////////
+$(document).ready(function() {
+  const $popup = $('#popup');
+  const $openPopupButton = $('#open-popup');
+  const $closePopupButton = $('#close-popup, #close-popup-button');
+
+  $openPopupButton.on('click', function() {
+    $popup.removeClass('hidden');
+    gsap.to($popup, { duration: 0.3, opacity: 1 });
+  });
+
+  $closePopupButton.on('click', function() {
+    gsap.to($popup, { duration: 0.3, opacity: 0, onComplete: function() {
+        $popup.addClass('hidden');
+      }});
+  });
+});
 
 
 ///////////////////////////////////////////
@@ -127,8 +143,8 @@ gsap.to("#img-horizontal", {
   ease: "none",
   scrollTrigger: {
     trigger: ".scroll",
-    // start: "top",
-    // end: "bottom",
+    start: "top",
+    end: "bottom",
     scrub: true,
     pin: true,
   }
@@ -140,6 +156,7 @@ const generateTooltip = (classNameDiv, classNameButton) => {
   $(document).ready(function () {
     const $button = $(classNameButton);
     const $tooltip = $(classNameDiv);
+    $tooltip.css('opacity', 0);
 
     $button.on('mouseenter', function (event) {
       gsap.to($tooltip, {
