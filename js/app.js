@@ -174,7 +174,23 @@ const generateTooltip = (classNameDiv, classNameButton) => {
     });
   });
 }
-
 generateTooltip('#tooltip', '#tooltip-button');
 generateTooltip('#tooltip-2', '#tooltip-button-2');
 generateTooltip('#tooltip-3', '#tooltip-button-3');
+
+// Animacion para el boton de scroll
+//efecto de que al hacer scroll se muestre el texto de abajo hacia arriba
+const scrollButton = document.querySelector('.scroll-button');
+gsap.fromTo(scrollButton, {
+  y: 100,
+  opacity: 0
+}, {
+  y: 0,
+  opacity: 1,
+  duration: 1,
+  scrollTrigger: {
+    trigger: scrollButton,
+    start: 'top 80%',
+    toggleActions: 'play none none none'
+  }
+});

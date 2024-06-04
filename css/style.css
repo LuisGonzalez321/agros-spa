@@ -25,14 +25,20 @@ body, html {
 /*add font in the file*/
 @font-face {
   font-family: "Georgia";
-  src: url("../assets/fonts/Georgia.ttf") format("truetype");
+  src: url("../assets/fonts/Georgia.ttf") format("truetype"),
+       url("../assets/fonts/Georgia.otf") format("opentype"),
+        url("../assets/fonts/Georgia.woff") format("woff"),
+        url("../assets/fonts/Georgia.woff2") format("woff2");
   /*add compatibility for firebox and safari*/
   font-style: normal;
 }
 
 /*Add font in the file*/
 @font-face {
-  src: url("../assets/fonts/MinionPro-Medium.otf") format("truetype");
+  src:  url("../assets/fonts/MinionPro-Medium.otf") format("truetype"),
+        url("../assets/fonts/MinionPro-Medium.ttf") format("woff"),
+        url("../assets/fonts/MinionPro-Medium.woff") format("woff"),
+        url("../assets/fonts/MinionPro-Medium.woff2") format("woff2");
   font-family: "MinionPro";
   font-style: normal;
 }
@@ -154,6 +160,47 @@ body, html {
   border-bottom: 0;
   margin-left: -15px;
   margin-bottom: -15px;
+}
+
+/*======================================*/
+
+.beat {
+  position:relative;
+  animation: beat 1s infinite;
+}
+
+.beat::before, .beat::after {
+  content:"";
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+
+  border: 10px solid #106b37;
+  border-radius:100%;
+  animation: beat-animated linear 3s infinite;
+}
+
+.beat::after {
+  animation-delay: -1.5s;
+}
+
+@keyframes beat-animated {
+  0% { width: 70px; height: 70px; border: 10px solid #106b37; }
+  100% { width: 120px; height: 120px; border: 10px solid transparent; }
+}
+
+/* Media queries */
+@media (max-width: 320px) {
+  /* phone */
+  .beat::before, .beat::after {
+    width: 50px;
+    height: 50px;
+  }
+  @keyframes beat-animated {
+    0% { width: 50px; height: 50px; border: 8px solid #106b37; }
+    100% { width: 100px; height: 100px; border: 8px solid transparent; }
+  }
 }
 
 
