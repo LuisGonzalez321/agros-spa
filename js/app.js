@@ -129,26 +129,43 @@ moveElement(100, '.text-agros-footer');
 
 //Animación de desplazamiento scroll horizontal para la sección de imagen
 
-const scrollContainer = document.querySelector('.scroll');
+let sections = gsap.utils.toArray(".scroll .panel");
+let container = document.querySelector('.container-scroll');
 
-/* Add the  html tags to s*/
-// <div className="image-container w-[600%] h-full absolute top-0 left-0 ">
-//   <img className="h-full " id="img-horizontal" src="./assets/img/FondoHorizontal.jpg" alt="Horizontal Image"/>
-// </div>
-
-
-
-gsap.to("#img-horizontal", {
-  x: () => -(document.querySelector("#img-horizontal").scrollWidth - window.innerWidth) + "px",
+let scrollTween = gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
   ease: "none",
+  duration: 6,
   scrollTrigger: {
     trigger: ".scroll",
-    start: "top",
-    end: "bottom",
-    scrub: true,
     pin: true,
+    scrub: true,
   }
 });
+
+//realiza animacion que muestre un efecto de fadeIn cuando se hace scroll con esta clase 'fade-scroll'
+const fadeScroll = (element, delay = 0, duration = 1) => {
+  gsap.fromTo(element,
+    {
+      opacity: 0
+    },
+    {
+      opacity: 1,
+      duration: duration,
+      delay: delay,
+      scrollTrigger: {
+        containerAnimation: container,
+        trigger: element,
+        start: 'top 80%',
+        markers: true,
+        scrub: true,
+        toggleActions: 'play none none none'
+      }
+    }
+  );
+}
+
+fadeScroll('.fade-scroll');
 
 
 // Animacion para tooltip

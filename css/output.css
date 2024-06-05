@@ -105,12 +105,22 @@ body, html {
 
 /*======================================*/
 
-.image-container{
-  width: 100%;
-  height: auto;
+/*=Styles for the scroll horizontal============== */
+
+.scroll {
+  height: 100vh;
+  /*   overflow: auto; */
+}
+
+.container-scroll {
+  height: 100%;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+}
+
+.panel{
+  position: relative;
+  width: 100%;
 }
 
 /*======================================*/
@@ -839,20 +849,12 @@ video {
   inset: 0px;
 }
 
-.left-0{
-  left: 0px;
-}
-
 .left-1\/2{
   left: 50%;
 }
 
 .right-2{
   right: 0.5rem;
-}
-
-.top-0{
-  top: 0px;
 }
 
 .top-1\/2{
@@ -921,6 +923,10 @@ video {
   margin-top: 16rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .block{
   display: block;
 }
@@ -951,6 +957,10 @@ video {
 
 .h-10{
   height: 2.5rem;
+}
+
+.h-16{
+  height: 4rem;
 }
 
 .h-\[1px\]{
@@ -1007,6 +1017,10 @@ video {
 
 .w-11\/12{
   width: 91.666667%;
+}
+
+.w-16{
+  width: 4rem;
 }
 
 .w-\[1500\%\]{
@@ -1076,6 +1090,10 @@ video {
 .gap-x-20{
   -moz-column-gap: 5rem;
        column-gap: 5rem;
+}
+
+.gap-y-6{
+  row-gap: 1.5rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -1212,6 +1230,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1245,6 +1268,11 @@ video {
 
 .italic{
   font-style: italic;
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-blue-600{
@@ -1387,11 +1415,6 @@ video {
     line-height: 1.5rem;
   }
 
-  .phone\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .phone\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -1500,10 +1523,6 @@ video {
     width: 66.666667%;
   }
 
-  .laptop\:w-2\/5{
-    width: 40%;
-  }
-
   .laptop\:w-2\/6{
     width: 33.333333%;
   }
@@ -1593,6 +1612,11 @@ video {
   .laptop\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .laptop\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .laptop\:text-xl{
