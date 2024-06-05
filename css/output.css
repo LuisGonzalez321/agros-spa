@@ -25,41 +25,42 @@ body, html {
 
 /*add font in the file*/
 
+/* Definición de la fuente Georgia */
+
 @font-face {
   font-family: "Georgia";
 
-  src: url("../assets/fonts/Georgia.ttf") format("truetype"),
-       url("../assets/fonts/Georgia.otf") format("opentype"),
-        url("../assets/fonts/Georgia.woff") format("woff"),
-        url("../assets/fonts/Georgia.woff2") format("woff2");
-
-  /*add compatibility for firebox and safari*/
+  src: url("../assets/fonts/Georgia.woff2") format("woff2"), /* Navegadores modernos */
+  url("../assets/fonts/Georgia.woff") format("woff"),   /* Compatibilidad amplia */
+  url("../assets/fonts/Georgia.otf") format("opentype"),
+  url("../assets/fonts/Georgia.ttf") format("truetype");
 
   font-style: normal;
 }
 
-/*Add font in the file*/
+/* Definición de la fuente MinionPro */
 
 @font-face {
-  src:  url("../assets/fonts/MinionPro-Medium.otf") format("truetype"),
-        url("../assets/fonts/MinionPro-Medium.ttf") format("woff"),
-        url("../assets/fonts/MinionPro-Medium.woff") format("woff"),
-        url("../assets/fonts/MinionPro-Medium.woff2") format("woff2");
-
   font-family: "MinionPro";
+
+  src: url("../assets/fonts/MinionPro-Medium.woff2") format("woff2"), /* Navegadores modernos */
+  url("../assets/fonts/MinionPro-Medium.woff") format("woff"),   /* Compatibilidad amplia */
+  url("../assets/fonts/MinionPro-Medium.otf") format("opentype"),
+  url("../assets/fonts/MinionPro-Medium.ttf") format("truetype");
 
   font-style: normal;
 }
 
 /* Implementación de la fuente en una clase */
 
-.font-georgia{
+.font-georgia {
   font-family: "Georgia", sans-serif;
   font-weight: 300;
 }
 
 .font-minionpro-regular {
   font-family: "MinionPro", sans-serif;
+  /** soporte para Firefox y otros navegadores */
 }
 
 /*============================================*/
@@ -1473,10 +1474,6 @@ video {
 
   .laptop\:top-64{
     top: 16rem;
-  }
-
-  .laptop\:top-72{
-    top: 18rem;
   }
 
   .laptop\:top-\[100px\]{
