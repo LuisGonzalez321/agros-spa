@@ -1,5 +1,13 @@
-//add gsap library
-//  import {gsap} from "gsap";
+document.addEventListener('DOMContentLoaded', function() {
+  tippy('[data-tooltip]', {
+    content(reference) {
+      return reference.getAttribute('data-tooltip');
+    },
+    allowHTML: true,
+    theme: 'tomato'
+  });
+});
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -194,6 +202,12 @@ const generateTooltip = (classNameDiv, classNameButton) => {
 generateTooltip('#tooltip', '#tooltip-button');
 generateTooltip('#tooltip-2', '#tooltip-button-2');
 generateTooltip('#tooltip-3', '#tooltip-button-3');
+
+
+//tooltip for scroll
+
+
+
 
 // Animacion para el boton de scroll
 //efecto de que al hacer scroll se muestre el texto de abajo hacia arriba

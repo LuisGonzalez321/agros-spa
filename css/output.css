@@ -881,6 +881,14 @@ video {
   left: 50%;
 }
 
+.left-\[72\%\]{
+  left: 72%;
+}
+
+.left-\[95\%\]{
+  left: 95%;
+}
+
 .right-2{
   right: 0.5rem;
 }
@@ -891,6 +899,10 @@ video {
 
 .top-2{
   top: 0.5rem;
+}
+
+.top-\[10\%\]{
+  top: 10%;
 }
 
 .top-\[30\%\]{
@@ -907,6 +919,10 @@ video {
 
 .z-30{
   z-index: 30;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .mx-1{
@@ -995,8 +1011,8 @@ video {
   height: 2.5rem;
 }
 
-.h-12{
-  height: 3rem;
+.h-14{
+  height: 3.5rem;
 }
 
 .h-\[1px\]{
@@ -1051,8 +1067,8 @@ video {
   width: 91.666667%;
 }
 
-.w-12{
-  width: 3rem;
+.w-14{
+  width: 3.5rem;
 }
 
 .w-\[1500\%\]{

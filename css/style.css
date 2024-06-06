@@ -128,9 +128,14 @@ body, html {
   height: 100vh;
 }
 
-
-
-
+.tippy-box[data-theme~='tomato'] {
+  background-color: white;
+  color: black;
+  font-family: 'MinionPro', sans-serif;
+  //*add shadow to the tooltip */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  font-size: 1.2em;
+}
 
 /*======================================*/
 /*=Styles for the tooltip============== */
