@@ -131,41 +131,41 @@ moveElement(100, '.text-agros-footer');
 
 let sections = gsap.utils.toArray(".scroll .panel");
 let container = document.querySelector('.container-scroll');
-
+//
 let scrollTween = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
+  x: () => -(sections.reduce((total, section) => total + section.offsetWidth, 0) - window.innerWidth),
   ease: "none",
   duration: 6,
   scrollTrigger: {
     trigger: ".scroll",
+    start: "top",
+    end: "bottom",
     pin: true,
     scrub: true,
   }
 });
-
 //realiza animacion que muestre un efecto de fadeIn cuando se hace scroll con esta clase 'fade-scroll'
-const fadeScroll = (element, delay = 0, duration = 1) => {
-  gsap.fromTo(element,
-    {
-      opacity: 0
-    },
-    {
-      opacity: 1,
-      duration: duration,
-      delay: delay,
-      scrollTrigger: {
-        containerAnimation: container,
-        trigger: element,
-        start: 'top 80%',
-        markers: true,
-        scrub: true,
-        toggleActions: 'play none none none'
-      }
+const fadeScroll = (className, opacity = 0, duration = 1) => {
+  gsap.fromTo(className, {
+    opacity: opacity
+  }, {
+    opacity: 1,
+    duration: duration,
+    scrollTrigger: {
+      trigger: className,
+      containerAnimation: scrollTween,
+      start: 'top 85%',
+      toggleActions: 'play none none none'
     }
-  );
+  });
 }
 
 fadeScroll('.fade-scroll');
+fadeScroll('.fade-scroll-2');
+fadeScroll('.fade-scroll-3');
+fadeScroll('.fade-scroll-4');
+fadeScroll('.fade-scroll-5');
+
 
 
 // Animacion para tooltip

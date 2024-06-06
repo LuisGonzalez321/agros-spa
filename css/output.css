@@ -108,19 +108,33 @@ body, html {
 /*=Styles for the scroll horizontal============== */
 
 .scroll {
-  height: 100vh;
-  /*   overflow: auto; */
+  width: 100vw;
 }
 
 .container-scroll {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
 }
 
 .panel{
-  position: relative;
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.panel  img{
+  aspect-ratio: auto;
+  width: 100%;
+  height: 100vh;
 }
 
 /*======================================*/
@@ -167,8 +181,10 @@ body, html {
   background: white;
   border-radius: .4em;
   padding: 1em;
+  font-weight: 300;
+  color: black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Georgia', sans-serif;
+  font-family: 'MinionPro', sans-serif;
 }
 
 .speech-bubble:after {
@@ -853,6 +869,18 @@ video {
   left: 50%;
 }
 
+.left-\[12\%\]{
+  left: 12%;
+}
+
+.left-\[5\%\]{
+  left: 5%;
+}
+
+.left-\[50\%\]{
+  left: 50%;
+}
+
 .right-2{
   right: 0.5rem;
 }
@@ -863,6 +891,14 @@ video {
 
 .top-2{
   top: 0.5rem;
+}
+
+.top-\[30\%\]{
+  top: 30%;
+}
+
+.top-\[40\%\]{
+  top: 40%;
 }
 
 .z-20{
@@ -959,8 +995,8 @@ video {
   height: 2.5rem;
 }
 
-.h-16{
-  height: 4rem;
+.h-12{
+  height: 3rem;
 }
 
 .h-\[1px\]{
@@ -977,10 +1013,6 @@ video {
 
 .h-lvh{
   height: 100lvh;
-}
-
-.h-screen{
-  height: 100vh;
 }
 
 .max-h-56{
@@ -1019,8 +1051,8 @@ video {
   width: 91.666667%;
 }
 
-.w-16{
-  width: 4rem;
+.w-12{
+  width: 3rem;
 }
 
 .w-\[1500\%\]{
@@ -1035,8 +1067,16 @@ video {
   width: 100%;
 }
 
+.w-screen{
+  width: 100vw;
+}
+
 .max-w-full{
   max-width: 100%;
+}
+
+.flex-none{
+  flex: none;
 }
 
 .transform{
@@ -1049,6 +1089,10 @@ video {
 
 .list-inside{
   list-style-position: inside;
+}
+
+.list-disc{
+  list-style-type: disc;
 }
 
 .grid-cols-1{
@@ -1230,11 +1274,6 @@ video {
   line-height: 2.25rem;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1346,6 +1385,10 @@ video {
 
   .phone\:w-8{
     width: 2rem;
+  }
+
+  .phone\:w-\[1500\%\]{
+    width: 1500%;
   }
 
   .phone\:w-\[6rem\]{
@@ -1539,6 +1582,10 @@ video {
     width: 15rem;
   }
 
+  .laptop\:w-\[370\%\]{
+    width: 370%;
+  }
+
   .laptop\:w-\[600\%\]{
     width: 600%;
   }
@@ -1612,6 +1659,11 @@ video {
   .laptop\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .laptop\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .laptop\:text-lg{
