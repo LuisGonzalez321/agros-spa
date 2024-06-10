@@ -138,20 +138,24 @@ moveElement(100, '.text-agros-footer');
 //Animación de desplazamiento scroll horizontal para la sección de imagen
 
 let sections = gsap.utils.toArray(".scroll .panel");
-let container = document.querySelector('.container-scroll');
-//
+
+let totalWidth = sections.reduce((total, section) => total + section.offsetWidth, 0);
+
 let scrollTween = gsap.to(sections, {
   x: () => -(sections.reduce((total, section) => total + section.offsetWidth, 0) - window.innerWidth),
   ease: "none",
-  duration: 6,
   scrollTrigger: {
     trigger: ".scroll",
-    start: "top",
-    end: "bottom",
+    start: "top top",
+    end: () => `+=${totalWidth - window.innerWidth}`,
     pin: true,
-    scrub: true,
+    scrub: 2,
   }
 });
+
+
+
+
 //realiza animacion que muestre un efecto de fadeIn cuando se hace scroll con esta clase 'fade-scroll'
 const fadeScroll = (className, opacity = 0, duration = 1) => {
   gsap.fromTo(className, {

@@ -15,7 +15,6 @@ module.exports = merge(common, {
         { from: 'assets/fonts', to: 'assets/fonts'},
         { from: 'css', to: 'css' },
         { from: 'js/vendor', to: 'js/vendor' },
-        { from: 'js/gsap', to: 'js/gsap' },
         { from: 'icon.svg', to: 'icon.svg' },
         { from: 'favicon.ico', to: 'favicon.ico' },
         { from: 'robots.txt', to: 'robots.txt' },

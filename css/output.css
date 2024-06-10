@@ -135,6 +135,15 @@ body, html {
   aspect-ratio: auto;
   width: 100%;
   height: 100vh;
+  left: -1px;
+}
+
+.tippy-box[data-theme~='tomato'] {
+  background-color: white;
+  color: black;
+  font-family: 'MinionPro', sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.2em;
 }
 
 /*======================================*/
@@ -873,6 +882,14 @@ video {
   left: 12%;
 }
 
+.left-\[35\%\]{
+  left: 35%;
+}
+
+.left-\[40\%\]{
+  left: 40%;
+}
+
 .left-\[5\%\]{
   left: 5%;
 }
@@ -881,8 +898,24 @@ video {
   left: 50%;
 }
 
+.left-\[55\%\]{
+  left: 55%;
+}
+
+.left-\[60\%\]{
+  left: 60%;
+}
+
+.left-\[7\%\]{
+  left: 7%;
+}
+
 .left-\[72\%\]{
   left: 72%;
+}
+
+.left-\[83\%\]{
+  left: 83%;
 }
 
 .left-\[95\%\]{
@@ -891,6 +924,10 @@ video {
 
 .right-2{
   right: 0.5rem;
+}
+
+.right-\[9\%\]{
+  right: 9%;
 }
 
 .top-1\/2{
@@ -905,12 +942,32 @@ video {
   top: 10%;
 }
 
+.top-\[12\%\]{
+  top: 12%;
+}
+
+.top-\[25\%\]{
+  top: 25%;
+}
+
 .top-\[30\%\]{
   top: 30%;
 }
 
-.top-\[40\%\]{
-  top: 40%;
+.top-\[33\%\]{
+  top: 33%;
+}
+
+.top-\[35\%\]{
+  top: 35%;
+}
+
+.top-\[36\%\]{
+  top: 36%;
+}
+
+.top-\[57\%\]{
+  top: 57%;
 }
 
 .z-20{
@@ -1015,6 +1072,10 @@ video {
   height: 3.5rem;
 }
 
+.h-16{
+  height: 4rem;
+}
+
 .h-\[1px\]{
   height: 1px;
 }
@@ -1055,10 +1116,6 @@ video {
   min-height: 1px;
 }
 
-.w-1\/3{
-  width: 33.333333%;
-}
-
 .w-10{
   width: 2.5rem;
 }
@@ -1071,8 +1128,8 @@ video {
   width: 3.5rem;
 }
 
-.w-\[1500\%\]{
-  width: 1500%;
+.w-16{
+  width: 4rem;
 }
 
 .w-auto{
@@ -1321,6 +1378,10 @@ video {
   font-weight: 600;
 }
 
+.uppercase{
+  text-transform: uppercase;
+}
+
 .italic{
   font-style: italic;
 }
@@ -1381,6 +1442,11 @@ video {
 
   .phone\:top-\[30px\]{
     top: 30px;
+  }
+
+  .phone\:my-\[0\.1rem\]{
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
   }
 
   .phone\:h-8{
@@ -1453,6 +1519,10 @@ video {
 
   .phone\:pl-8{
     padding-left: 2rem;
+  }
+
+  .phone\:pt-12{
+    padding-top: 3rem;
   }
 
   .phone\:text-center{
@@ -1550,16 +1620,21 @@ video {
     top: 50%;
   }
 
+  .laptop\:top-1\/3{
+    top: 33.333333%;
+  }
+
   .laptop\:top-52{
     top: 13rem;
   }
 
-  .laptop\:top-64{
-    top: 16rem;
-  }
-
   .laptop\:top-\[100px\]{
     top: 100px;
+  }
+
+  .laptop\:my-\[0\.74rem\]{
+    margin-top: 0.74rem;
+    margin-bottom: 0.74rem;
   }
 
   .laptop\:mt-10{
@@ -1582,6 +1657,10 @@ video {
     width: 66.666667%;
   }
 
+  .laptop\:w-2\/4{
+    width: 50%;
+  }
+
   .laptop\:w-2\/6{
     width: 33.333333%;
   }
@@ -1598,12 +1677,8 @@ video {
     width: 15rem;
   }
 
-  .laptop\:w-\[370\%\]{
-    width: 370%;
-  }
-
-  .laptop\:w-\[600\%\]{
-    width: 600%;
+  .laptop\:w-\[350\%\]{
+    width: 350%;
   }
 
   .laptop\:w-auto{
@@ -1648,8 +1723,12 @@ video {
     padding-left: 7rem;
   }
 
-  .laptop\:pl-36{
-    padding-left: 9rem;
+  .laptop\:pl-44{
+    padding-left: 11rem;
+  }
+
+  .laptop\:pt-20{
+    padding-top: 5rem;
   }
 
   .laptop\:text-2xl{
@@ -1719,4 +1798,3 @@ video {
     line-height: 1;
   }
 }
-
